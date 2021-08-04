@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvFood: RecyclerView
     private var list: ArrayList<Food> = arrayListOf()
 
-    //Home
+    //Main
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,20 +22,21 @@ class MainActivity : AppCompatActivity() {
         rvFood.setHasFixedSize(true)
 
         list.addAll(FoodData.listData)
-        tampilview()
+        showcardFood()
+    }
+    //CardView
+    private fun showcardFood(){
+        rvFood.layoutManager = LinearLayoutManager(this)
+        val cardFoodAdapter = CardFoodAdapter(list)
+        rvFood.adapter = cardFoodAdapter
     }
 
-    private fun tampilview(){
-        rvFood.layoutManager = LinearLayoutManager(this)
-        val listFoodAdapter = ListFoodAdapter(list)
-        rvFood.adapter = listFoodAdapter
-    }
-    //about
+    //About
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.about,menu)
         return super.onCreateOptionsMenu(menu)
     }
-
+    //Move Activity
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.nav_about ->{

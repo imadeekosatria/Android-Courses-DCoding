@@ -6,12 +6,13 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/item_photo"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginEnd="16dp"
-        tools:src="@tools:sample/avatars"/>
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/itemimg" />
 
     <LinearLayout
         android:layout_width="match_parent"
