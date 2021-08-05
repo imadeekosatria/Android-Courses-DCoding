@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,9 +27,9 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
 
         holder.name.text = food.name
         holder.harga.text = food.price
+        holder.stock.text = food.stock
         holder.btnFavorite.setOnClickListener{ Toast.makeText(holder.itemView.context, "Favorite " +listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}
         holder.btnBuy.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil Membeli " + listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
-        holder.itemView.setOnClickListener{ Toast.makeText(holder.itemView.context, " " +listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}
     }
 
     override fun getItemCount(): Int {
@@ -41,5 +42,7 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
         var harga: TextView = itemView.findViewById(R.id.harga_item)
         var btnFavorite: Button = itemView.findViewById(R.id.favorite)
         var btnBuy: Button = itemView.findViewById(R.id.buy)
+        var stock: TextView = itemView.findViewById(R.id.stock)
     }
+
 }

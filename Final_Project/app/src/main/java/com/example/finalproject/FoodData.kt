@@ -3,7 +3,7 @@ package com.example.finalproject
 object FoodData {
     private val foodName = arrayOf("Bebek Panggang",
         "Barbecue",
-        "Barbacue_potong",
+        "Barbacue Potong",
         "Bebek Panggang Cina",
         "Mie Ayam",
         "Rendang",
@@ -37,6 +37,16 @@ object FoodData {
         R.drawable.strawberry_dessert
     )
 
+    private val stock = arrayOf("Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",
+        "Tersedia",)
     val listData: ArrayList<Food>
         get(){
             val list = arrayListOf<Food>()
@@ -45,6 +55,7 @@ object FoodData {
                 food.name = foodName[position]
                 food.price = foodPrice[position]
                 food.photo = foodImages[position]
+                food.stock = stock[position]
                 list.add(food)
             }
             return list

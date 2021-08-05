@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var rvFood: RecyclerView
     private var list: ArrayList<Food> = arrayListOf()
 
@@ -23,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(FoodData.listData)
         showcardFood()
+
+        val moveDetail: ImageView = findViewById(R.id.item_photo)
+        moveDetail.setOnClickListener(this)
     }
     //CardView
     private fun showcardFood(){
@@ -46,4 +51,15 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.item_photo->{
+                val moveDetail = Intent(this@MainActivity, Detail::class.java)
+                startActivity(moveDetail)
+            }
+        }
+    }
+
+
 }

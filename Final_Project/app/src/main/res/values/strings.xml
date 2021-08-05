@@ -7,4 +7,9 @@
     <string name="email">imadeekosatriawiguna@gmail.com</string>
     <string name="itemimg">itemImg</string>
     <string name="favorit">Favorit</string>
+    <string name="stock">Stock</string>
+    <string name="conten_text">conten_text</string>
+    <string name="ingridient">Ingridient</string>
+    <string name="gambar_makanan">gambar_makanan</string>
+    <string name="beli">Beli</string>
 </resources>

@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/font/style.xml" value="0.20989583333333334" />
         <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_about.xml" value="0.17889492753623187" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_detail.xml" value="0.22" />
         <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_cardview_food.xml" value="0.2" />
-        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_row_food.xml" value="0.1" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_cardview_food.xml" value="0.14666666666666667" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_row_food.xml" value="0.22" />
         <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/menu/about.xml" value="0.1796875" />
       </map>
     </option>

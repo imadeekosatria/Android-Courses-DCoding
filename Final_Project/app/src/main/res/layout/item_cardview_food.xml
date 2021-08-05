@@ -18,50 +18,64 @@
         android:padding="8dp">
         
         <ImageView
+            android:clickable="true"
             android:id="@+id/item_photo"
             android:layout_width="150dp"
             android:layout_height="220dp"
             android:layout_marginBottom="4dp"
             android:scaleType="centerCrop"
-            tools:src="@tools:sample/avatars"/>
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/gambar_makanan" />
+
         <TextView
             android:id="@+id/nama_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@id/item_photo"
-            android:layout_toRightOf="@id/item_photo"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            tools:text="@string/food_name"/>
+            tools:text="@string/food_name" />
 
         <TextView
             android:id="@+id/harga_item"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/layout_button"
+            android:layout_height="30dp"
             android:layout_below="@id/nama_item"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_toEndOf="@id/item_photo"
-            android:layout_toRightOf="@id/item_photo"
             android:ellipsize="end"
-            android:textSize="32sp"
-            android:textStyle="bold"
             android:textColor="#4CAF50"
-            tools:text="@string/harga"/>
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:text="@string/harga" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_button"
+            android:layout_below="@+id/harga_item"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@id/item_photo"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            tools:text="@string/stock" />
+
         <LinearLayout
             android:id="@+id/layout_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_toEndOf="@id/item_photo"
-            android:layout_toRightOf="@id/item_photo"
             android:orientation="horizontal">
 
             <Button
@@ -79,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Beli"
+                android:text="@string/beli"
                 android:textSize="12sp"/>
         </LinearLayout>
     </RelativeLayout>
