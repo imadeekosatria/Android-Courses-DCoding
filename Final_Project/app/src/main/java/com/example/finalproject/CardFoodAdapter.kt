@@ -28,7 +28,7 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
         holder.name.text = food.name
         holder.harga.text = food.price
         holder.stock.text = food.stock
-        holder.btnFavorite.setOnClickListener{ Toast.makeText(holder.itemView.context, "Favorite " +listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()}
+        holder.btnDetail.setOnClickListener{ Toast.makeText(holder.itemView.context, "Detail under construction ", Toast.LENGTH_SHORT).show()}
         holder.btnBuy.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil Membeli " + listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
     }
 
@@ -40,7 +40,7 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
         var imgItem: ImageView = itemView.findViewById(R.id.item_photo)
         var name: TextView = itemView.findViewById(R.id.nama_item)
         var harga: TextView = itemView.findViewById(R.id.harga_item)
-        var btnFavorite: Button = itemView.findViewById(R.id.favorite)
+        var btnDetail: Button = itemView.findViewById(R.id.detail)
         var btnBuy: Button = itemView.findViewById(R.id.buy)
         var stock: TextView = itemView.findViewById(R.id.stock)
     }
