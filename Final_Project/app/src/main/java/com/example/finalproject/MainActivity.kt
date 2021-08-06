@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     //CardView
     private fun showcardFood(){
         rvFood.layoutManager = LinearLayoutManager(this)
-        val cardFoodAdapter = CardFoodAdapter(list)
+        val cardFoodAdapter = CardFoodAdapter(list,this)
         rvFood.adapter = cardFoodAdapter
 
     }
@@ -41,6 +41,15 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
     //Move Activity
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_about -> {
+                val moveIntent = Intent(this@MainActivity, About::class.java)
+                startActivity(moveIntent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 
 

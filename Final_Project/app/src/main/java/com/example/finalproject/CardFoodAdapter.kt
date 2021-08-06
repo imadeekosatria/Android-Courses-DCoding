@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapter<CardFoodAdapter.CardViewViewHolder>() {
+class CardFoodAdapter(private val listFood: ArrayList<Food>, private val context: Context): RecyclerView.Adapter<CardFoodAdapter.CardViewViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardFoodAdapter.CardViewViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_cardview_food, parent, false)
         return CardViewViewHolder(view)
@@ -28,7 +29,23 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>): RecyclerView.Adapt
         holder.name.text = food.name
         holder.harga.text = food.price
         holder.stock.text = food.stock
-        holder.btnDetail.setOnClickListener{ Toast.makeText(holder.itemView.context, "Detail under construction ", Toast.LENGTH_SHORT).show()}
+        holder.btnDetail.setOnClickListener{
+            /**Toast.makeText(holder.itemView.context, "Detail under construction ", Toast.LENGTH_SHORT).show()
+            */
+            //Get Posisition
+
+            val title : String = food.name
+            val img : Int = food.photo
+            val stock: String = food.stock
+            val hargadetail : String = food.price
+
+            val intent = Intent(context, Detail::class.java)
+            intent.putExtra("nama",title)
+            intent.putExtra("gambar",img)
+            intent.putExtra("stock",stock)
+            intent.putExtra("harga",hargadetail)
+            context.startActivities(arrayOf(intent))
+        }
         holder.btnBuy.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil Membeli " + listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
     }
 

@@ -13,6 +13,8 @@ object FoodData {
         "Strawberry Dessert"
     )
 
+    private val bahan = arrayOf("")
+
     private val foodPrice = arrayOf("Rp25.000",
         "Rp30.000",
         "Rp25.000",
