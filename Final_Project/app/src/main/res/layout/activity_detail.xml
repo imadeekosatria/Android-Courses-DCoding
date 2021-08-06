@@ -81,34 +81,17 @@
                     tools:ignore="TextContrastCheck" />
             </LinearLayout>
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+
+
+            <TextView
+                android:id="@+id/stock_detail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:text="@string/bahan"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/detail_bahan"
-                        android:textSize="14sp" />
-                </TableRow>
-
-            </TableLayout>
+                android:layout_marginBottom="16dp"
+                android:text="@string/stock"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/ingridient"
@@ -120,15 +103,27 @@
                 android:lineSpacingMultiplier="1"
                 android:text="@string/ingridient" />
 
-            <TextView
-                android:id="@+id/stock_detail"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/stock"
-                android:textSize="12sp" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/bahan"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_bahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/detail_bahan"
+                    android:textSize="14sp" />
+            </TableRow>
 
 
         </LinearLayout>

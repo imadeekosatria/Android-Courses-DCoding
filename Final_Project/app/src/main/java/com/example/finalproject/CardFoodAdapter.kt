@@ -38,12 +38,14 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>, private val context
             val img : Int = food.photo
             val stock: String = food.stock
             val hargadetail : String = food.price
+            val bahandet: String = food.bahan
 
             val intent = Intent(context, Detail::class.java)
             intent.putExtra("nama",title)
             intent.putExtra("gambar",img)
             intent.putExtra("stock",stock)
             intent.putExtra("harga",hargadetail)
+            intent.putExtra("bahan",bahandet)
             context.startActivities(arrayOf(intent))
         }
         holder.btnBuy.setOnClickListener { Toast.makeText(holder.itemView.context, "Berhasil Membeli " + listFood[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
