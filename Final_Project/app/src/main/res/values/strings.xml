@@ -13,6 +13,10 @@
     <string name="gambar_makanan">gambar_makanan</string>
     <string name="beli">Beli</string>
     <string name="detail">Detail</string>
-    <string name="bahan">Bahan</string>
+    <string name="bahan">Bahan:</string>
     <string name="detail_bahan">Detail bahan</string>
+    <string name="instagram">instagram</string>
+    <string name="whatsapp">whatsapp</string>
+    <string name="facebook">facebook</string>
+    <string name="linkedin">linkedin</string>
 </resources>

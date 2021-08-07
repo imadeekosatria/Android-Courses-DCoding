@@ -1,21 +1,26 @@
 package com.example.finalproject
 
-import android.app.ActionBar
-import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telecom.Call
+import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 
-class Detail : AppCompatActivity() {
+class Detail : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
         val actionBar : androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
+        actionBar.setDisplayHomeAsUpEnabled(true)
+        /**
+         Tombol social media
+         **/
 
         //Bind
         val nama :TextView = findViewById(R.id.nama_makanan)
@@ -24,14 +29,14 @@ class Detail : AppCompatActivity() {
         val stock : TextView = findViewById(R.id.stock_detail)
         val bahan : TextView = findViewById(R.id.detail_bahan)
         //Get Data
-        var intent = intent
+        val intent = intent
         val detitle =intent.getStringExtra("nama")
         val degambar = intent.getIntExtra("gambar",0)
         val deharga = intent.getStringExtra("harga")
         val destock = intent.getStringExtra("stock")
         val detbahan = intent.getStringExtra("bahan")
 
-        actionBar.setTitle(detitle)
+        actionBar.title = detitle
         nama.text = detitle
         gambar.setImageResource(degambar)
         harga.text = deharga
@@ -40,4 +45,5 @@ class Detail : AppCompatActivity() {
 
 
     }
+
 }
