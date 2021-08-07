@@ -33,13 +33,12 @@ class CardFoodAdapter(private val listFood: ArrayList<Food>, private val context
             /**Toast.makeText(holder.itemView.context, "Detail under construction ", Toast.LENGTH_SHORT).show()
             */
             //Get Posisition
-
             val title : String = food.name
             val img : Int = food.photo
             val stock: String = food.stock
             val hargadetail : String = food.price
             val bahandet: String = food.bahan
-
+            //Sent Data
             val intent = Intent(context, Detail::class.java)
             intent.putExtra("nama",title)
             intent.putExtra("gambar",img)

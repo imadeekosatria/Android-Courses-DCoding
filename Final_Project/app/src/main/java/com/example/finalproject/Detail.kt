@@ -1,14 +1,8 @@
 package com.example.finalproject
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 
 class Detail : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,10 +12,21 @@ class Detail : AppCompatActivity(){
         val actionBar : androidx.appcompat.app.ActionBar? = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
         actionBar.setDisplayHomeAsUpEnabled(true)
-        /**
-         Tombol social media
-         **/
 
+        val share : ImageButton = findViewById(R.id.share)
+        share.setOnClickListener {
+            Toast.makeText(applicationContext, "Share, tidak tau apa yang harus di share Maap 🤦‍♂️", Toast.LENGTH_LONG).show()
+        }
+
+        val beli : Button = findViewById(R.id.beli)
+        beli.setOnClickListener {
+            Toast.makeText(applicationContext, "Berhasil beli 👏", Toast.LENGTH_SHORT).show()
+        }
+
+        val favorit : Button = findViewById(R.id.favorite)
+        favorit.setOnClickListener {
+            Toast.makeText(applicationContext, "Favorite 🤍", Toast.LENGTH_SHORT).show()
+        }
         //Bind
         val nama :TextView = findViewById(R.id.nama_makanan)
         val gambar :ImageView = findViewById(R.id.detail_gambar)

@@ -3,12 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Github/Android-Courses-DCoding/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_detail.xml" value="0.25" />
-        <entry key="..\:/Github/Android-Courses-DCoding/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_main.xml" value="0.18795289855072464" />
-        <entry key="..\:/Github/Android-Courses-DCoding/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/detail_adaper.xml" value="0.18795289855072464" />
-        <entry key="..\:/Github/Android-Courses-DCoding/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_cardview_food.xml" value="0.25" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/font/style.xml" value="0.20989583333333334" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_about.xml" value="0.17889492753623187" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_cardview_food.xml" value="0.3333333333333333" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/layout/item_row_food.xml" value="0.22" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/menu/about.xml" value="0.1796875" />
+        <entry key="..\:/Github/Android-Courses-DCoding/Final_Project/app/src/main/res/menu/share.xml" value="0.1796875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>
